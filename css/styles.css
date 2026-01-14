@@ -140,3 +140,24 @@ h4 {
   background: var(--background-color);
   border: 2px solid var(--accent-color);
 }
+
+
+/* Pricing Section */
+
+.pricing__description{
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.pricing__item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px dotted var(--default-color);
+  margin: 2rem;
+}
+
+.pricing__item-price{
+  color: var(--accent-color);
+}
+
