@@ -67,3 +67,45 @@ h4 {
     font-size: 2.8rem;
   }
 }
+/* Icons */
+
+.icon{
+  width: 32px;
+  height: 32px;
+}
+
+.icon--white{
+  color: var(--surface-color);
+}
+
+.icon__container{
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+  background-color: var(--accent-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Service Components */
+.service__card {
+  box-shadow: 0px 5px 90px 0px rgba(0, 0, 0, 0.1);
+  background-color: var(--surface-color);
+  padding: 60px 30px;
+  transition: all ease-in-out 0.3s;
+  border-radius: 18px;
+  border-bottom: 5px solid var(--surface-color);
+  height: 100%;
+  margin: 2rem;
+  height: 200px;
+  
+}
+.service__card > p {
+  line-height: 1.2;
+  font-size: 1.4rem;
+}
+.container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
