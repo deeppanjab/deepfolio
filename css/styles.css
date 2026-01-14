@@ -96,16 +96,47 @@ h4 {
   transition: all ease-in-out 0.3s;
   border-radius: 18px;
   border-bottom: 5px solid var(--surface-color);
-  height: 100%;
   margin: 2rem;
   height: 200px;
-  
 }
 .service__card > p {
   line-height: 1.2;
   font-size: 1.4rem;
 }
-.container{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+
+/* Resume Element */
+.resume__info {
+  margin: 3rem;
+}
+
+.resume__items {
+  padding-left: 1.6rem;
+  border-left: 2px solid dodgerblue;
+  position: relative;
+}
+.resume__description{
+  font-style: italic;
+}
+
+.resume__items-heading {
+  color: var(--default-color);
+  text-transform: uppercase;
+}
+.list__items{
+  padding-bottom: 1rem;
+}
+.list__item{
+  margin-bottom: 1rem;
+}
+
+
+.resume__items::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -10px;
+  background: var(--background-color);
+  border: 2px solid var(--accent-color);
 }
