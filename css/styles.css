@@ -82,8 +82,17 @@ h4 {
   height: 16px;
 }
 
+.icon--lsmall {
+  width: 24px;
+  height: 24px;
+}
+
 .icon--white {
   color: var(--surface-color);
+}
+
+.icon--accent {
+  color: var(--accent-color);
 }
 
 .icon__container {
@@ -94,6 +103,22 @@ h4 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.icon__boundary{
+  border: 1px solid var(--accent-color);
+  background-color: var(--surface-color);
+  width: 48px;
+  height: 48px;
+  transition: color .4s;
+}
+
+.icon__boundary:hover{
+  background-color: var(--accent-color);
+
+}
+.icon__boundary:hover .icon{
+  color: var(--surface-color);
 }
 
 /* Service Components */
@@ -205,4 +230,20 @@ h4 {
   transform: rotate(90deg);
   fill: var(--accent-color);
   transition: transform 0.5s;
+}
+
+
+/* Contact */
+
+.contact__info{
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+.content__address-heading{
+  margin-bottom: 0;
+}
+.content__address-text{
+  font-size: 1.6rem;
+  margin-top: 2px;
 }
