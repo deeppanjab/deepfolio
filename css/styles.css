@@ -19,6 +19,12 @@ html {
   --nav-font: "Poppins", sans-serif;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-size: 2.1rem;
   font-family: var(--default-font);
@@ -105,19 +111,18 @@ h4 {
   align-items: center;
 }
 
-.icon__boundary{
+.icon__boundary {
   border: 1px solid var(--accent-color);
   background-color: var(--surface-color);
   width: 48px;
   height: 48px;
-  transition: color .4s;
+  transition: color 0.4s;
 }
 
-.icon__boundary:hover{
+.icon__boundary:hover {
   background-color: var(--accent-color);
-
 }
-.icon__boundary:hover .icon{
+.icon__boundary:hover .icon {
   color: var(--surface-color);
 }
 
@@ -215,14 +220,14 @@ h4 {
   width: 100%;
   height: 0;
   opacity: 0;
-  transition:height .2s ease-in, opacity 0.4s ease;
+  transition: height 0.2s ease-in, opacity 0.4s ease;
 }
 
 .collapsible--expanded .faq__item-heading {
   color: var(--accent-color);
 }
 .collapsible--expanded .faq__content {
- height: 100%;
+  height: 100%;
   opacity: 1;
 }
 
@@ -232,18 +237,70 @@ h4 {
   transition: transform 0.5s;
 }
 
-
 /* Contact */
 
-.contact__info{
+.contact__info {
   display: flex;
   align-items: center;
   gap: 1.2rem;
 }
-.content__address-heading{
+.content__address-heading {
   margin-bottom: 0;
 }
-.content__address-text{
+.content__address-text {
   font-size: 1.6rem;
   margin-top: 2px;
+}
+
+.contact__form {
+  background-color: var(--surface-color);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  padding: 3rem;
+  margin: 3rem;
+}
+
+input[type="email"],
+input[type="text"],
+textarea {
+  width: 100%;
+  font-size: 14px;
+  padding: 10px 15px;
+  box-shadow: none;
+  border-radius: 0;
+  margin-top: 2rem;
+  color: var(--default-color);
+  background-color: color-mix(
+    in srgb,
+    var(--background-color),
+    transparent 50%
+  );
+  border-color: color-mix(in srgb, var(--default-color), transparent 85%);
+  outline-color: var(--accent-color);
+}
+
+textarea {
+  height: 14rem;
+}
+
+.contact__form-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+.contact__form {
+  text-align: center;
+}
+
+.btn {
+  padding: 1rem 1.5rem;
+  border: 0;
+  border-radius: 30px;
+  font-size: 1.6rem;
+  margin: 2rem 2rem 0 2rem;
+  cursor: pointer;
+}
+
+.btn--accent {
+  background-color: var(--accent-color);
+  color: var(--surface-color);
 }
