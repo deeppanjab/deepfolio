@@ -412,3 +412,26 @@ textarea {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+.block__header{
+  text-align: center;
+}
+
+.block__heading {
+  font-weight: bold;
+  position: relative;
+}
+
+.block__heading::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 64px;
+  height: 4px;
+  background: var(--accent-color);
+  top: 64px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
