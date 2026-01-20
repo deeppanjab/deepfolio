@@ -449,15 +449,15 @@ textarea {
   font-size: 1.2rem;
   font-weight: 700;
   gap: 1rem;
-  transition: color .7s ease-in;
+  transition: color 0.7s ease-in;
   cursor: pointer;
 }
 
-.isotype .list__item:first-child{
+.isotype .list__item:first-child {
   color: var(--accent-color);
 }
 
-.isotype .list__item:hover{
+.isotype .list__item:hover {
   color: var(--accent-color);
 }
 
@@ -483,28 +483,27 @@ textarea {
   font-size: 1.2rem;
 }
 
-.isotype__image:hover .isotype__info{
+.isotype__image:hover .isotype__info {
   opacity: 1;
 }
 
-.isotype__info h4{
+.isotype__info h4 {
   margin: 0;
 }
 
 @media screen and (min-width: 768px) {
   .grid--1x2 {
     grid-template-columns: repeat(2, 1fr);
-
   }
-  .isotype .list{
+  .isotype .list {
     font-size: 1.6rem;
   }
 
-  .isotype__container{
+  .isotype__container {
     margin: 4rem;
   }
 
-  .isotype__info{
+  .isotype__info {
     font-size: 1.6rem;
   }
 }
@@ -512,5 +511,49 @@ textarea {
 @media screen and (min-width: 1024px) {
   .grid--1x3 {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Acheivements */
+
+.stats {
+  color: var(--surface-color);
+  background-image: url(/img/counters-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  margin: 5rem 0;
+  font-weight: 700;
+}
+
+.stats::before {
+  content: "";
+  background-color: var(--accent-color);
+  opacity: 0.6;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.purecounter {
+  font-size: 4.8rem;
+  display: block;
+  font-weight: 700;
+}
+
+.stats__item {
+  width: 100%;
+  z-index: 5;
+  padding: 4rem 0;
+}
+
+.stats__items {
+  text-align: center;
+  padding: 8rem 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .grid--1x4 {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
