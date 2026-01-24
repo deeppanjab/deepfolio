@@ -7,6 +7,15 @@
   --surface-color: #ffffff;
 }
 
+.accent-background {
+  --background-color: #0078ff;
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
+  --accent-color: #ffffff;
+  --surface-color: #3393ff;
+  --contrast-color: #ffffff;
+}
+
 /* Typography */
 html {
   font-size: 62.5%;
@@ -557,3 +566,116 @@ textarea {
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
+/* Testimonials */
+
+.testimonials {
+  position: relative;
+  padding: 80px 0;
+  color: var(--surface-color);
+  font-size: 1.6rem;
+  height: 520px;
+  display: flex;
+  align-items: center;
+}
+
+.testimonials::before {
+  content: "";
+  background: color-mix(in srgb, var(--background-color), transparent 30%);
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+.testimonials__bg {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.section {
+  color: var(--default-color);
+  background-color: var(--accent-color);
+  padding: 120px 0;
+  scroll-margin-top: 92px;
+  overflow: clip;
+}
+
+.testimonials__item img {
+  width: 90px;
+  border-radius: 100%;
+  border: 4px solid var(--surface-color);
+}
+
+.testimonials__container {
+  position: relative;
+  z-index: 4;
+  text-align: center;
+  width: 75%;
+}
+
+.testimonials__list {
+  transition-duration: 0ms;
+  transition-delay: 0ms;
+}
+
+.testimonials__item {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.person__profile {
+  font-size: 1.4rem;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  font-weight: normal;
+}
+
+.person__name,
+.person__profile {
+  margin: 0;
+}
+
+.stars {
+  margin: 2rem;
+}
+
+.quote__text {
+  font-style: italic;
+  font-size: 1.8rem;
+}
+
+.quote__text::before,
+.quote__text::after {
+  font-size: 2em;
+  line-height: 0;
+  vertical-align: -0.4em;
+}
+
+.quote__text::before {
+  content: open-quote;
+}
+
+.quote__text::after {
+  content: close-quote;
+}
+
+.testimonials .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+  color: var(--surface-color);
+  cursor: pointer;
+}
+
+.swiper-pagination-bullet {
+  background: var(--swiper-pagination-bullet-inactive-color, #ccc);
+  height: 12px;
+  width: 12px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--accent-color);
+}
+
