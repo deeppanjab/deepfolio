@@ -765,7 +765,6 @@ textarea {
 }
 
 @media (min-width: 1024px) {
-  
   /* Show menu normally */
   .nav__list {
     position: static;
@@ -780,7 +779,62 @@ textarea {
   .nav__hambar {
     display: none;
   }
-  .nav__link{
+  .nav__link {
     color: var(--surface-color);
   }
 }
+
+/* Hero */
+
+.hero__section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url(/img/hero-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center;
+  position: relative;
+  text-align: center;
+}
+.hero__heading,
+.hero__profile {
+  color: var(--surface-color);
+
+}
+
+
+.hero__heading{
+  font-size: clamp(3.2rem, 6vw, 5.8rem);
+}
+
+.hero__profile{
+  font-size: clamp(2rem, 4vw, 4rem);
+}
+
+
+.hero__section::after {
+  content: "";
+  background: color-mix(in srgb, var(--default-color), transparent 70%);
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+.cursor {
+  display: inline-block;
+  color: white;
+  font-weight: 500;
+}
+
+.blink {
+  animation: blink 0.7s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
