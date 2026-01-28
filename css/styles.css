@@ -52,6 +52,7 @@ h6 {
   font-family: var(--heading-font);
   margin: 1.5rem 0;
   font-weight: 600;
+  margin-bottom: 2.4rem;
 }
 
 h1 {
@@ -179,15 +180,20 @@ h4 {
 /* Resume Element */
 .resume__info {
   margin: 3rem;
+  gap: 1.2rem;
 }
+
 
 .resume__items {
   padding-left: 1.6rem;
+  padding-bottom: 1.6rem;
   border-left: 2px solid dodgerblue;
   position: relative;
+  margin-top: -1.4rem;
 }
 .resume__description {
   font-style: italic;
+  margin-bottom: 1rem;
 }
 
 .resume__items-heading {
@@ -196,6 +202,7 @@ h4 {
 }
 .list__items {
   padding-bottom: 1rem;
+  margin-left: 2.4rem;
 }
 .list__item {
   margin-bottom: 1rem;
@@ -210,6 +217,12 @@ h4 {
   left: -10px;
   background: var(--background-color);
   border: 2px solid var(--accent-color);
+}
+
+@media screen and (min-width: 1024px) {
+  .resume__info.grid--1x2{
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* Pricing Section */
@@ -412,7 +425,7 @@ textarea {
 }
 
 @media screen and (min-width: 768px) {
-  .grid--1x2 {
+  .person__info.grid--1x2 {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -502,7 +515,7 @@ textarea {
 }
 
 @media screen and (min-width: 768px) {
-  .grid--1x2 {
+  .isotype__layout.grid--1x2 {
     grid-template-columns: repeat(2, 1fr);
   }
   .isotype .list {
