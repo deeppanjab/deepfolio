@@ -107,7 +107,7 @@ h4 {
 }
 
 .container {
-  max-width: 1440px;
+  max-width: 1140px;
   margin: 0 auto;
 }
 
@@ -170,11 +170,27 @@ h4 {
   border-radius: 18px;
   border-bottom: 5px solid var(--surface-color);
   margin: 2rem;
-  height: 200px;
 }
 .service__card > p {
   line-height: 1.2;
   font-size: 1.4rem;
+}
+.card__heading{
+  font-size: 2.2rem;
+}
+
+
+@media screen and (min-width: 768px) {
+  .service__container.grid--1x2{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media screen and (min-width: 1024px) {
+  .service__container.grid--1x3{
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 /* Resume Element */
@@ -438,11 +454,13 @@ textarea {
 
 .block__header {
   text-align: center;
+  margin: 8rem 0  5rem;
 }
 
 .block__heading {
   font-weight: bold;
   position: relative;
+  /* margin: 8rem 0; */
 }
 
 .block__heading::after {
