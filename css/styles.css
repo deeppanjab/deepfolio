@@ -266,13 +266,35 @@ h4 {
 }
 
 /* FAQ */
+.faq{
+margin: 8rem auto;
+
+}
+
+.faq__header {
+  margin: 2rem;
+}
+
+.faq__heading {
+  font-weight: 400;
+}
+
+.faq__description {
+  font-size: 1.6rem;
+}
+
+.faq__items{
+
+  transition: all .5s ease;
+}
 .faq__item {
   background-color: var(--surface-color);
   position: relative;
-  padding: 1rem;
+  padding: 1rem 2rem;
   margin: 2rem;
   box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  cursor: pointer;
 }
 .number {
   color: var(--accent-color);
@@ -282,23 +304,26 @@ h4 {
   position: absolute;
   right: 24px;
   top: 24px;
+  transition: transform 0.4s ease;
 }
+
 
 .faq__content {
   font-size: 1.6rem;
-  width: 100%;
-  height: 0;
+  max-height: 0;
+  overflow: hidden;
   opacity: 0;
-  transition:
-    height 0.2s ease-in,
-    opacity 0.4s ease;
+  transition: 
+    max-height 0.6s ease,
+    opacity 1s ease;
 }
+
 
 .collapsible--expanded .faq__item-heading {
   color: var(--accent-color);
 }
 .collapsible--expanded .faq__content {
-  height: 100%;
+  max-height: 500px;   /* large enough to fit content */
   opacity: 1;
 }
 
@@ -306,6 +331,12 @@ h4 {
   transform: rotate(90deg);
   fill: var(--accent-color);
   transition: transform 0.5s;
+}
+
+@media screen and (min-width: 1024px) {
+  .faq.grid--1x2{
+    grid-template-columns:  35% auto;
+  }
 }
 
 /* Contact */
