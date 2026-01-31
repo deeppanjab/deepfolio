@@ -19,6 +19,7 @@
 /* Typography */
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 :root {
   --default-font:
@@ -27,6 +28,11 @@ html {
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Raleway", sans-serif;
   --nav-font: "Poppins", sans-serif;
+}
+
+/* Ensure jumping to anchors accounts for the sticky navbar */
+main [id] {
+  scroll-margin-top: 132px;
 }
 
 * {
@@ -193,7 +199,7 @@ h4 {
 
 /* Resume Element */
 .resume__info {
-  margin: 3rem;
+  margin: 3rem 1rem;
   gap: 1.2rem;
 }
 
@@ -215,7 +221,7 @@ h4 {
 }
 .list__items {
   padding-bottom: 1rem;
-  margin-left: 2.4rem;
+  margin-left: 1.4rem;
 }
 .list__item {
   margin-bottom: 1rem;
@@ -297,7 +303,7 @@ h4 {
 
 .faq__item .icon {
   position: absolute;
-  right: 24px;
+  right: 8px;
   top: 24px;
   transition: transform 0.4s ease;
 }
@@ -764,13 +770,17 @@ textarea {
   background-color: #000;
   font-family: var(--nav-font);
   position: relative;
+  z-index: 12;
+   position: sticky;
+  top: 0;
 }
 
 .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2.4rem 2rem;
+  padding: 2.4rem 1rem;
+
 }
 
 .nav a {
@@ -868,7 +878,7 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: calc(100vh - 9rem);
   background: url(/img/hero-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -882,6 +892,9 @@ textarea {
   color: var(--surface-color);
 }
 
+.hero__info{
+  z-index: 9;
+}
 .hero__heading {
   font-size: clamp(3.2rem, 6vw, 5.8rem);
 }
@@ -890,9 +903,9 @@ textarea {
   font-size: clamp(2rem, 4vw, 4rem);
 }
 
-.hero__section::after {
+.hero__section::before {
   content: "";
-  background: color-mix(in srgb, var(--default-color), transparent 70%);
+  background: color-mix(in srgb, #000, transparent 40%);
   position: absolute;
   inset: 0;
   z-index: 2;

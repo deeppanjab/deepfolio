@@ -19,7 +19,923 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-   
+    <!-- Navbar -->
+    <header class="navbar__header">
+      <nav class="nav container">
+        <span class="nav__logo">
+          <a href="index.html">DeepFolio</a>
+        </span>
+
+        <svg class="icon icon--white nav__hambar">
+          <use xlink:href="img/sprite.svg#hambar"></use>
+        </svg>
+
+        <ul class="nav__list list">
+          <li class="nav-item">
+            <a href="#home" class="nav__link js-scroll">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav__link js-scroll">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#services" class="nav__link js-scroll">Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="#portfolio" class="nav__link js-scroll">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a href="#work" class="nav__link js-scroll">Work</a>
+          </li>
+          <li class="nav-item">
+            <a href="#blog" class="nav__link js-scroll">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav__link js-scroll">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <!-- Hero -->
+
+      <div class="hero__section" id="home">
+        <div class="hero__info container">
+          <h1 class="hero__heading">I am Jashandeep Freeman</h1>
+          <h2 class="hero__profile">
+            <span id="typed-text">Front-end Developer</span
+            ><span class="cursor">|</span>
+          </h2>
+        </div>
+      </div>
+
+      <!-- Person about -->
+
+      <div id="about" class="container">
+        <section class="person__info grid grid--1x2">
+          <div class="person__bio">
+            <div class="person__bio-details">
+              <img src="img/profile-img.jpg" alt="" />
+              <ul class="list">
+                <li class="list__item">
+                  <span class="bold">Name: </span>Jashandeep Singh
+                </li>
+                <li class="list__item">
+                  <span class="bold">Profile: </span>Front-end Developer
+                </li>
+                <li class="list__item">
+                  <span class="bold">Email: </span>contact@deeppanjab.com
+                </li>
+                <li class="list__item">
+                  <span class="bold">Phone: </span>(91) 95177-34356
+                </li>
+              </ul>
+            </div>
+            <div class="person__skills">
+              <h5>Skills</h5>
+              <div class="progress">
+                <div class="skill">
+                  <span>HTML</span>
+                  <span class="percent">%100</span>
+                </div>
+                <div class="progress__bar_wrap">
+                  <div class="progress__bar"></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <div class="skill">
+                  <span>CSS</span>
+                  <span class="percent">%90</span>
+                </div>
+                <div class="progress__bar_wrap">
+                  <div class="progress__bar" style="width: 90%"></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <div class="skill">
+                  <span>JavaScript</span>
+                  <span class="percent">%75</span>
+                </div>
+                <div class="progress__bar_wrap">
+                  <div class="progress__bar" style="width: 75%"></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <div class="skill">
+                  <span>Photoshop</span>
+                  <span class="percent">%60</span>
+                </div>
+                <div class="progress__bar_wrap">
+                  <div class="progress__bar" style="width: 60%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="person__about">
+            <h4 class="person__about-heading">About me</h4>
+            <p>
+              Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.
+              Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
+              Praesent sapien massa, convallis a pellentesque nec, egestas non
+              nisi. Nulla porttitor accumsan tincidunt
+            </p>
+
+            <p>
+              Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
+              Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum
+              ac diam sit amet quam vehicula elementum sed sit amet dui.
+              porttitor at sem.
+            </p>
+
+            <p>
+              Nulla porttitor accumsan tincidunt. Quisque velit nisi, pretium ut
+              lacinia in, elementum id enim. Nulla porttitor accumsan tincidunt.
+              Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
+            </p>
+          </div>
+        </section>
+      </div>
+
+      <!-- Resume -->
+      <div class="container">
+        <div class="block block__header">
+      <h3 class="block__heading">Resume</h3>
+      <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+    </div>
+        <div class="resume__info grid grid--1x2">
+          <div class="resume__info">
+            <div class="resume__info-edu">
+              <h3 class="resume__title">Summary</h3>
+              <div class="resume__items">
+                <h4 class="resume__items-heading">Brandon Johnson</h4>
+                <p class="resume__description">
+                  Innovative and deadline-driven Graphic Designer with 3+ years
+                  of experience designing and developing user-centered
+                  digital/print marketing material from initial concept to
+                  final, polished deliverable.
+                </p>
+                <ul class="list__items">
+                  <li class="list__item">Portland par 127,Orlando, FL</li>
+                  <li class="list__item">(123) 456-7891</li>
+                  <li class="list__item">alice.barkley@example.com</li>
+                </ul>
+              </div>
+            </div>
+            <div class="resume__info-edu">
+              <h3 class="resume__title">Education</h3>
+              <div class="resume__items">
+                <h4 class="resume__items-heading">
+                  Master of Fine Arts & Graphic Design
+                </h4>
+                <h5>2023-26</h5>
+                <p class="resume__description">
+                  Innovative and deadline-driven Graphic Designer with 3+ years
+                  of experience designing and developing user-centered
+                  digital/print marketing material from initial concept to
+                  final, polished deliverable.
+                </p>
+                <p>
+                  Qui deserunt veniam. Et sed aliquam labore tempore sed
+                  quisquam iusto autem sit. Ea vero voluptatum qui ut
+                  dignissimos deleniti nerada porti sand markend
+                </p>
+              </div>
+            </div>
+            <div class="resume__info-edu">
+              <div class="resume__items">
+                <h4 class="resume__items-heading">
+                  Bachelor of Fine Arts & Graphic Design
+                </h4>
+                <h5>2023-26</h5>
+                <p class="resume__description">
+                  Innovative and deadline-driven Graphic Designer with 3+ years
+                  of experience designing and developing user-centered
+                  digital/print marketing material from initial concept to
+                  final, polished deliverable.
+                </p>
+                <p>
+                  Qui deserunt veniam. Et sed aliquam labore tempore sed
+                  quisquam iusto autem sit. Ea vero voluptatum qui ut
+                  dignissimos deleniti nerada porti sand markend
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="resume__info">
+            <div class="resume__info-exp">
+              <h3 class="resume__title">Professional Experience</h3>
+              <div class="resume__items">
+                <h4 class="resume__items-heading">
+                  Senior graphic design specialist
+                </h4>
+                <h5>2019 - Present</h5>
+                <p class="resume__description">Experion, New York, NY</p>
+                <ul class="list__items">
+                  <li class="list__item">
+                    Lead in the design, development, and implementation of the
+                    graphic, layout, and production communication materials
+                  </li>
+                  <li class="list__item">
+                    Delegate tasks to the 7 members of the design team and
+                    provide counsel on all aspects of the project
+                  </li>
+                  <li class="list__item">
+                    Supervise the assessment of all graphic materials in order
+                    to ensure quality and accuracy of the design
+                  </li>
+                  <li class="list__item">
+                    Oversee the efficient use of production project budgets
+                    ranging from $2,000 - $25,000
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="resume__info-exp">
+              <div class="resume__items">
+                <h4 class="resume__items-heading">Graphic design specialist</h4>
+                <h5>2017-2018</h5>
+                <p class="resume__description">
+                  Stepping Stone Advertising, New York, NY
+                </p>
+                <ul class="list__items">
+                  <li class="list__item">
+                    Developed numerous marketing programs (logos,
+                    brochures,infographics, presentations, and advertisements).
+                  </li>
+                  <li class="list__item">
+                    Managed up to 5 projects or tasks at a given time while
+                    under pressure
+                  </li>
+                  <li class="list__item">
+                    Recommended and consulted with clients on the most
+                    appropriate graphic design
+                  </li>
+                  <li class="list__item">
+                    Created 4+ design presentations and proposals a month for
+                    clients and account managers
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Services -->
+
+      <div id="services" class="service container">
+        <div class="block block__header">
+          <h3 class="block__heading">Services</h3>
+          <p>
+            Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
+            consectetur velit
+          </p>
+        </div>
+        <div class="service__container grid grid--1x2 grid--1x3">
+          <div class="service__card">
+            <div class="icon__container">
+              <svg class="icon icon--white">
+                <use xlink:href="img/sprite.svg#activity"></use>
+              </svg>
+            </div>
+            <h3 class="card__heading">Nescuint Mete</h3>
+            <p>
+              Provident nihil minus qui consequatur non omnis maiores. Eos
+              accusantium minus dolores iure perferendis tempore et consequatur.
+            </p>
+          </div>
+          <div class="service__card">
+            <div class="icon__container">
+              <svg class="icon icon--white">
+                <use xlink:href="img/sprite.svg#broadcast"></use>
+              </svg>
+            </div>
+
+            <h3 class="card__heading">Eosle Commodi</h3>
+            <p>
+              Ut autem aut autem non a. Sint sint sit facilis nam iusto sint.
+              Libero corrupti neque eum hic non ut nesciunt dolorem.
+            </p>
+          </div>
+          <div class="service__card">
+            <div class="icon__container">
+              <svg class="icon icon--white">
+                <use xlink:href="img/sprite.svg#easel"></use>
+              </svg>
+            </div>
+            <h3 class="card__heading">Ledo Markt</h3>
+            <p>
+              Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus
+              ea aut. Vel qui id voluptas adipisci eos earum corrupti.
+            </p>
+          </div>
+          <div class="service__card">
+            <div class="icon__container">
+              <svg class="icon icon--white">
+                <use xlink:href="img/sprite.svg#bounding-box-circles"></use>
+              </svg>
+            </div>
+            <h3 class="card__heading">Asperiores Commodit</h3>
+            <p>
+              Non et temporibus minus omnis sed dolor esse consequatur.
+              Cupiditate sed error ea fuga sit provident adipisci neque.
+            </p>
+          </div>
+          <div class="service__card">
+            <div class="icon__container">
+              <svg class="icon icon--white">
+                <use xlink:href="img/sprite.svg#calendar-week"></use>
+              </svg>
+            </div>
+            <h3 class="card__heading">Velit Doloremque</h3>
+            <p>
+              Cumque et suscipit saepe. Est maiores autem enim facilis ut aut
+              ipsam corporis aut. Sed animi at autem alias eius labore.
+            </p>
+          </div>
+          <div class="service__card">
+            <div class="icon__container">
+              <svg class="icon icon--white">
+                <use xlink:href="img/sprite.svg#chat-square-text"></use>
+              </svg>
+            </div>
+            <h3 class="card__heading">Dolori Architecto</h3>
+            <p>
+              Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque
+              non et debitis iure. Corrupti recusandae ducimus enim.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Achievments -->
+
+      <div class="stats">
+        <div class="stats__items container grid grid--1x2 grid--1x4">
+          <div class="stats__item">
+            <span class="purecounter">252</span>
+            <p>Clients</p>
+          </div>
+          <div class="stats__item">
+            <span class="purecounter">521</span>
+            <p>Projects</p>
+          </div>
+          <div class="stats__item">
+            <span class="purecounter">1453</span>
+            <p>Hours Of Support</p>
+          </div>
+          <div class="stats__item">
+            <span class="purecounter">32</span>
+            <p>Awards</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Portfolio -->
+
+      <div id="portfolio" class="container">
+        <div class="block block__header">
+          <h3 class="block__heading">Portfolio</h3>
+          <p>
+            Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
+            consectetur velit
+          </p>
+        </div>
+        <section class="isotype__container isotype">
+          <ul class="list">
+            <li class="list__item">All</li>
+            <li class="list__item">App</li>
+            <li class="list__item">Product</li>
+            <li class="list__item">Branding</li>
+            <li class="list__item">Books</li>
+          </ul>
+          <div class="isotype__layout grid grid--1x2 grid--1x3">
+            <div class="isotype__image">
+              <img src="img/app-1.jpg" alt="" />
+              <div class="isotype__info">
+                <h4>App 1</h4>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+              </div>
+            </div>
+            <div class="isotype__image">
+              <img src="img/books-1.jpg" alt="" />
+              <div class="isotype__info">
+                <h4>Book 1</h4>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+              </div>
+            </div>
+            <div class="isotype__image">
+              <img src="img/branding-1.jpg" alt="" />
+              <div class="isotype__info">
+                <h4>Branding 1</h4>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+              </div>
+            </div>
+            <div class="isotype__image">
+              <img src="img/product-1.jpg" alt="" />
+              <div class="isotype__info">
+                <h4>Product 1</h4>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+              </div>
+            </div>
+            <div class="isotype__image">
+              <img src="img/app-2.jpg" alt="" />
+              <div class="isotype__info">
+                <h4>App 2</h4>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+              </div>
+            </div>
+
+            <div class="isotype__image">
+              <img src="img/books-2.jpg" alt="" />
+              <div class="isotype__info">
+                <h4>Book 2</h4>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+              </div>
+            </div>
+
+            <div class="isotype__image">
+              <img src="img/branding-2.jpg" alt="" />
+              <div class="isotype__info">
+                <h4>Branding 2</h4>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+              </div>
+            </div>
+            <div class="isotype__image">
+              <img src="img/product-2.jpg" alt="" />
+              <div class="isotype__info">
+                <h4>Product 2</h4>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+              </div>
+            </div>
+
+            <div class="isotype__image">
+              <img src="img/app-3.jpg" alt="" />
+              <div class="isotype__info">
+                <h4>App 3</h4>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+              </div>
+            </div>
+
+            <div class="isotype__image">
+              <img src="img/books-3.jpg" alt="" />
+              <div class="isotype__info">
+                <h4>Book 3</h4>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+              </div>
+            </div>
+
+            <div class="isotype__image">
+              <img src="img/branding-3.jpg" alt="" />
+              <div class="isotype__info">
+                <h4>Branding 3</h4>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+              </div>
+            </div>
+            <div class="isotype__image">
+              <img src="img/product-3.jpg" alt="" />
+              <div class="isotype__info">
+                <h4>Product 3</h4>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Pricing -->
+
+      <div id="work" class="pricing container">
+        <div class="block block__header">
+          <h3 class="block__heading">Pricing</h3>
+          <p>
+            Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
+            consectetur velit
+          </p>
+        </div>
+        <div class="pricing__items grid grid--1x2">
+          <div class="pricing__item">
+            <h4 class="pricing__description">Portrait Photography</h4>
+            <h5 class="pricing__item-price">$160.00</h5>
+          </div>
+          <div class="pricing__item">
+            <h4 class="pricing__description">Sports Photography</h4>
+            <h5 class="pricing__item-price">$200.00</h5>
+          </div>
+          <div class="pricing__item">
+            <h4 class="pricing__description">Wedding Photography</h4>
+            <h5 class="pricing__item-price">$500.00</h5>
+          </div>
+          <div class="pricing__item">
+            <h4 class="pricing__description">Fashion Photography</h4>
+            <h5 class="pricing__item-price">$300.00</h5>
+          </div>
+          <div class="pricing__item">
+            <h4 class="pricing__description">Still Life Photography</h4>
+            <h5 class="pricing__item-price">$120.00</h5>
+          </div>
+          <div class="pricing__item">
+            <h4 class="pricing__description">Photojournalism</h4>
+            <h5 class="pricing__item-price">$200.00</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+
+      <div class="faq container grid grid--1x2">
+        <div class="faq__header">
+          <h3 class="faq__heading">
+            Frequently Asked <strong>Questions</strong>
+          </h3>
+          <p class="faq__description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis
+            aute irure dolor in reprehenderit
+          </p>
+        </div>
+        <div class="faq__items">
+          <div class="faq__item collapsible collapsible--expanded">
+            <h5 class="faq__item-heading">
+              <span class="number">1. </span
+              ><span>Non consectetur a erat nam at lectus urna duis?</span>
+            </h5>
+            <div class="faq__content">
+              <p>
+                Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id
+                volutpat lacus laoreet non curabitur gravida. Venenatis lectus
+                magna fringilla urna porttitor rhoncus dolor purus non.
+              </p>
+            </div>
+            <svg class="icon icon--small icon--white">
+              <use xlink:href="img/sprite.svg#right-chevron"></use>
+            </svg>
+          </div>
+
+          <div class="faq__item collapsible">
+            <h5 class="faq__item-heading">
+              <span class="number">2. </span
+              ><span
+                >Feugiat scelerisque varius morbi enim nunc faucibus a
+                pellentesque?</span
+              >
+            </h5>
+            <div class="faq__content">
+              <p>
+                Dolor sit amet consectetur adipiscing elit pellentesque habitant
+                morbi. Id interdum velit laoreet id donec ultrices. Fringilla
+                phasellus faucibus scelerisque eleifend donec pretium. Est
+                pellentesque elit ullamcorper dignissim. Mauris ultrices eros in
+                cursus turpis massa tincidunt dui.
+              </p>
+            </div>
+            <svg class="icon icon--small icon--white">
+              <use xlink:href="img/sprite.svg#right-chevron"></use>
+            </svg>
+          </div>
+
+          <div class="faq__item collapsible">
+            <h5 class="faq__item-heading">
+              <span class="number">3. </span
+              ><span>
+                Dolor sit amet consectetur adipiscing elit pellentesque?</span
+              >
+            </h5>
+            <div class="faq__content">
+              <p>
+                Eleifend mi in nulla posuere sollicitudin aliquam ultrices
+                sagittis orci. Faucibus pulvinar elementum integer enim. Sem
+                nulla pharetra diam sit amet nisl suscipit. Rutrum tellus
+                pellentesque eu tincidunt. Lectus urna duis convallis convallis
+                tellus. Urna molestie at elementum eu facilisis sed odio morbi
+                quis
+              </p>
+            </div>
+            <svg class="icon icon--small icon--white">
+              <use xlink:href="img/sprite.svg#right-chevron"></use>
+            </svg>
+          </div>
+
+          <div class="faq__item collapsible">
+            <h5 class="faq__item-heading">
+              <span class="number">4. </span
+              ><span
+                >Ac odio tempor orci dapibus. Aliquam eleifend mi in
+                nulla?</span
+              >
+            </h5>
+            <div class="faq__content">
+              <p>
+                Dolor sit amet consectetur adipiscing elit pellentesque habitant
+                morbi. Id interdum velit laoreet id donec ultrices. Fringilla
+                phasellus faucibus scelerisque eleifend donec pretium. Est
+                pellentesque elit ullamcorper dignissim. Mauris ultrices eros in
+                cursus turpis massa tincidunt dui.
+              </p>
+            </div>
+            <svg class="icon icon--small icon--white">
+              <use xlink:href="img/sprite.svg#right-chevron"></use>
+            </svg>
+          </div>
+
+          <div class="faq__item collapsible">
+            <h5 class="faq__item-heading">
+              <span class="number">5. </span
+              ><span
+                >Tempus quam pellentesque nec nam aliquam sem et tortor
+                consequat?</span
+              >
+            </h5>
+            <div class="faq__content">
+              <p>
+                Molestie a iaculis at erat pellentesque adipiscing commodo.
+                Dignissim suspendisse in est ante in. Nunc vel risus commodo
+                viverra maecenas accumsan. Sit amet nisl suscipit adipiscing
+                bibendum est. Purus gravida quis blandit turpis cursus in
+              </p>
+            </div>
+            <svg class="icon icon--small icon--white">
+              <use xlink:href="img/sprite.svg#right-chevron"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonials -->
+
+      <section id="blog" class="testimonials section accent-background">
+        <img class="testimonials__bg" src="img/testimonials-bg.jpg" alt="" />
+        <div class="testimonials__container swiper container">
+          <div class="testimonials__list list swiper-wrapper">
+            <div class="testimonials__item swiper-slide">
+              <img src="img/testimonials-1.jpg" alt="" />
+              <h5 class="person__name">Saul Goodman</h5>
+              <h6 class="person__profile">Ceo & Founder</h6>
+              <div class="stars">
+                <svg class="icon icon--small">
+                  <use xlink:href="img/sprite.svg#star"></use>
+                </svg>
+                <svg class="icon icon--small">
+                  <use xlink:href="img/sprite.svg#star"></use>
+                </svg>
+                <svg class="icon icon--small">
+                  <use xlink:href="img/sprite.svg#star"></use>
+                </svg>
+                <svg class="icon icon--small">
+                  <use xlink:href="img/sprite.svg#star"></use>
+                </svg>
+                <svg class="icon icon--small">
+                  <use xlink:href="img/sprite.svg#star"></use>
+                </svg>
+              </div>
+
+              <blockquote class="quote">
+                <p class="quote__text">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Commodi voluptate repudiandae sed, facere reiciendis tempora
+                  odio perspiciatis accusantium dicta beatae.
+                </p>
+              </blockquote>
+            </div>
+
+            <div class="testimonials__item swiper-slide">
+              <img src="img/testimonials-2.jpg" alt="" />
+              <h5 class="person__name">Sara Wilson</h5>
+              <h6 class="person__profile">Designer</h6>
+              <div class="stars">
+                <svg class="icon icon--small">
+                  <use xlink:href="img/sprite.svg#star"></use>
+                </svg>
+                <svg class="icon icon--small">
+                  <use xlink:href="img/sprite.svg#star"></use>
+                </svg>
+                <svg class="icon icon--small">
+                  <use xlink:href="img/sprite.svg#star"></use>
+                </svg>
+                <svg class="icon icon--small">
+                  <use xlink:href="img/sprite.svg#star"></use>
+                </svg>
+                <svg class="icon icon--small">
+                  <use xlink:href="img/sprite.svg#star"></use>
+                </svg>
+              </div>
+
+              <blockquote class="quote">
+                <p class="quote__text">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Commodi voluptate repudiandae sed, facere reiciendis tempora
+                  odio perspiciatis accusantium dicta beatae.
+                </p>
+              </blockquote>
+            </div>
+            <div class="testimonials__item swiper-slide">
+              <img src="img/testimonials-3.jpg" alt="" />
+              <h5 class="person__name">Jena Karslin</h5>
+              <h6 class="person__profile">Store Owner</h6>
+              <div class="stars">
+                <svg class="icon icon--small">
+                  <use xlink:href="img/sprite.svg#star"></use>
+                </svg>
+                <svg class="icon icon--small">
+                  <use xlink:href="img/sprite.svg#star"></use>
+                </svg>
+                <svg class="icon icon--small">
+                  <use xlink:href="img/sprite.svg#star"></use>
+                </svg>
+                <svg class="icon icon--small">
+                  <use xlink:href="img/sprite.svg#star"></use>
+                </svg>
+                <svg class="icon icon--small">
+                  <use xlink:href="img/sprite.svg#star"></use>
+                </svg>
+              </div>
+
+              <blockquote class="quote">
+                <p class="quote__text">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Commodi voluptate repudiandae sed, facere reiciendis tempora
+                  odio perspiciatis accusantium dicta beatae.
+                </p>
+              </blockquote>
+            </div>
+            <div class="testimonials__item swiper-slide">
+              <img src="img/testimonials-4.jpg" alt="" />
+              <h5 class="person__name">Matt Brandon</h5>
+              <h6 class="person__profile">Freelancer</h6>
+              <div class="stars">
+                <svg class="icon icon--small">
+                  <use xlink:href="img/sprite.svg#star"></use>
+                </svg>
+                <svg class="icon icon--small">
+                  <use xlink:href="img/sprite.svg#star"></use>
+                </svg>
+                <svg class="icon icon--small">
+                  <use xlink:href="img/sprite.svg#star"></use>
+                </svg>
+                <svg class="icon icon--small">
+                  <use xlink:href="img/sprite.svg#star"></use>
+                </svg>
+                <svg class="icon icon--small">
+                  <use xlink:href="img/sprite.svg#star"></use>
+                </svg>
+              </div>
+
+              <blockquote class="quote">
+                <p class="quote__text">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Commodi voluptate repudiandae sed, facere reiciendis tempora
+                  odio perspiciatis accusantium dicta beatae.
+                </p>
+              </blockquote>
+            </div>
+            <div class="testimonials__item swiper-slide">
+              <img src="img/testimonials-5.jpg" alt="" />
+              <h5 class="person__name">John Larson</h5>
+              <h6 class="person__profile">Enterprenur</h6>
+              <div class="stars">
+                <svg class="icon icon--small">
+                  <use xlink:href="img/sprite.svg#star"></use>
+                </svg>
+                <svg class="icon icon--small">
+                  <use xlink:href="img/sprite.svg#star"></use>
+                </svg>
+                <svg class="icon icon--small">
+                  <use xlink:href="img/sprite.svg#star"></use>
+                </svg>
+                <svg class="icon icon--small">
+                  <use xlink:href="img/sprite.svg#star"></use>
+                </svg>
+                <svg class="icon icon--small">
+                  <use xlink:href="img/sprite.svg#star"></use>
+                </svg>
+              </div>
+
+              <blockquote class="quote">
+                <p class="quote__text">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Commodi voluptate repudiandae sed, facere reiciendis tempora
+                  odio perspiciatis accusantium dicta beatae.
+                </p>
+              </blockquote>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
+
+      <!-- Contact Form -->
+
+      <div id="contact" class="contact container">
+        <div class="block block__header">
+          <h3 class="block__heading">Contact</h3>
+          <p>
+            Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
+            consectetur velit
+          </p>
+        </div>
+        <div class="contact--wrap grid grid--1x3">
+          <div class="contact__info">
+            <div class="icon__container icon__boundary">
+              <svg class="icon icon--lsmall icon--accent">
+                <use xlink:href="img/sprite.svg#geo-alt"></use>
+              </svg>
+            </div>
+            <div class="content__address">
+              <h5 class="content__address-heading">Address</h5>
+              <p class="content__address-text">
+                A108 Adam Street, New York, NY 535022
+              </p>
+            </div>
+          </div>
+          <div class="contact__info">
+            <div class="icon__container icon__boundary">
+              <svg class="icon icon--lsmall icon--accent">
+                <use xlink:href="img/sprite.svg#telephone"></use>
+              </svg>
+            </div>
+            <div class="content__address">
+              <h5 class="content__address-heading">Call Us</h5>
+              <p class="content__address-text">+1 5589 55488 55s</p>
+            </div>
+          </div>
+          <div class="contact__info">
+            <div class="icon__container icon__boundary">
+              <svg class="icon icon--lsmall icon--accent">
+                <use xlink:href="img/sprite.svg#mail"></use>
+              </svg>
+            </div>
+            <div class="content__address">
+              <h5 class="content__address-heading">Email Us</h5>
+              <p class="content__address-text">info@example.com</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact__form">
+          <div class="contact__form-info grid grid--1x2">
+            <div class="contact__values">
+              <input
+                class="form__control"
+                name="name"
+                type="text"
+                placeholder="Your Name"
+              />
+            </div>
+            <div class="contact__values">
+              <input
+                class="form__control"
+                name="email"
+                type="email"
+                placeholder="Your Email"
+              />
+            </div>
+          </div>
+          <div class="contact__values">
+            <input
+              class="form__control"
+              type="text"
+              name="subject"
+              placeholder="Subject"
+            />
+          </div>
+          <div class="contact__values">
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Message"
+            ></textarea>
+          </div>
+          <button class="btn btn--accent">Send Message</button>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__container container">
+        <p class="footer__description">
+          &copy; Copyright <strong>Deepfolio</strong> All Rights Reserved
+        </p>
+        <div class="footer__social-media">
+          <svg class="icon icon__boundary icon__container">
+            <use xlink:href="img/sprite.svg#twitter-x"></use>
+          </svg>
+          <svg class="icon icon__boundary icon__container">
+            <use xlink:href="img/sprite.svg#facebook"></use>
+          </svg>
+          <svg class="icon icon__boundary icon__container">
+            <use xlink:href="img/sprite.svg#instagram"></use>
+          </svg>
+          <svg class="icon icon__boundary icon__container">
+            <use xlink:href="img/sprite.svg#linkedin"></use>
+          </svg>
+        </div>
+        <p>Designed By Deep Panjab</p>
+      </div>
+    </footer>
+
     <!-- Linking Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>

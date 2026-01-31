@@ -32,7 +32,7 @@ const swiper = new Swiper(".testimonials__container", {
   },
 });
 
-const sections = document.querySelectorAll("section[id]");
+const sections = document.querySelectorAll("main [id]");
 const navLinks = document.querySelectorAll(".nav__link");
 
 window.addEventListener("scroll", () => {
