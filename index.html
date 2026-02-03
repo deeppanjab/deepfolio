@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Deep Portfolio</title>
+    <!-- Animation Style sheet -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Link stylesheet for Swiper -->
     <link
       rel="stylesheet"
@@ -59,7 +61,11 @@
       <!-- Hero -->
 
       <div class="hero__section" id="home">
-        <div class="hero__info container">
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          class="hero__info container"
+        >
           <h1 class="hero__heading">I am Jashandeep Freeman</h1>
           <h2 class="hero__profile">
             <span id="typed-text">Front-end Developer</span
@@ -70,7 +76,12 @@
 
       <!-- Person about -->
 
-      <div id="about" class="container">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        id="about"
+        class="container"
+      >
         <section class="person__info grid grid--1x2">
           <div class="person__bio">
             <div class="person__bio-details">
@@ -159,13 +170,16 @@
       </div>
 
       <!-- Resume -->
-      <div class="container">
-        <div class="block block__header">
-      <h3 class="block__heading">Resume</h3>
-      <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-    </div>
-        <div class="resume__info grid grid--1x2">
-          <div class="resume__info">
+      <div class="resume__container container">
+        <div data-aos="fade-up" class="block block__header">
+          <h3 class="block__heading">Resume</h3>
+          <p>
+            Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
+            consectetur velit
+          </p>
+        </div>
+        <div class="resume grid grid--1x2">
+          <div data-aos="fade-up" data-aos-delay="100" class="resume__info">
             <div class="resume__info-edu">
               <h3 class="resume__title">Summary</h3>
               <div class="resume__items">
@@ -223,7 +237,7 @@
               </div>
             </div>
           </div>
-          <div class="resume__info">
+          <div data-aos="fade-up" data-aos-delay="200" class="resume__info">
             <div class="resume__info-exp">
               <h3 class="resume__title">Professional Experience</h3>
               <div class="resume__items">
@@ -285,7 +299,7 @@
       <!-- Services -->
 
       <div id="services" class="service container">
-        <div class="block block__header">
+        <div data-aos="fade-up" class="block block__header">
           <h3 class="block__heading">Services</h3>
           <p>
             Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
@@ -293,7 +307,7 @@
           </p>
         </div>
         <div class="service__container grid grid--1x2 grid--1x3">
-          <div class="service__card">
+          <div data-aos="fade-up" data-aos-delay="100" class="service__card">
             <div class="icon__container">
               <svg class="icon icon--white">
                 <use xlink:href="img/sprite.svg#activity"></use>
@@ -305,7 +319,8 @@
               accusantium minus dolores iure perferendis tempore et consequatur.
             </p>
           </div>
-          <div class="service__card">
+
+          <div data-aos="fade-up" data-aos-delay="200" class="service__card">
             <div class="icon__container">
               <svg class="icon icon--white">
                 <use xlink:href="img/sprite.svg#broadcast"></use>
@@ -318,7 +333,7 @@
               Libero corrupti neque eum hic non ut nesciunt dolorem.
             </p>
           </div>
-          <div class="service__card">
+          <div data-aos="fade-up" data-aos-delay="300" class="service__card">
             <div class="icon__container">
               <svg class="icon icon--white">
                 <use xlink:href="img/sprite.svg#easel"></use>
@@ -330,7 +345,7 @@
               ea aut. Vel qui id voluptas adipisci eos earum corrupti.
             </p>
           </div>
-          <div class="service__card">
+          <div data-aos="fade-up" data-aos-delay="400" class="service__card">
             <div class="icon__container">
               <svg class="icon icon--white">
                 <use xlink:href="img/sprite.svg#bounding-box-circles"></use>
@@ -342,7 +357,7 @@
               Cupiditate sed error ea fuga sit provident adipisci neque.
             </p>
           </div>
-          <div class="service__card">
+          <div data-aos="fade-up" data-aos-delay="500" class="service__card">
             <div class="icon__container">
               <svg class="icon icon--white">
                 <use xlink:href="img/sprite.svg#calendar-week"></use>
@@ -354,7 +369,7 @@
               ipsam corporis aut. Sed animi at autem alias eius labore.
             </p>
           </div>
-          <div class="service__card">
+          <div data-aos="fade-up" data-aos-delay="600" class="service__card">
             <div class="icon__container">
               <svg class="icon icon--white">
                 <use xlink:href="img/sprite.svg#chat-square-text"></use>
@@ -372,7 +387,11 @@
       <!-- Achievments -->
 
       <div class="stats">
-        <div class="stats__items container grid grid--1x2 grid--1x4">
+        <div
+          data-aos="fade-up"
+          data-aos-delay="100"
+          class="stats__items container grid grid--1x2 grid--1x4"
+        >
           <div class="stats__item">
             <span class="purecounter">252</span>
             <p>Clients</p>
@@ -395,7 +414,7 @@
       <!-- Portfolio -->
 
       <div id="portfolio" class="container">
-        <div class="block block__header">
+        <div data-aos="fade-up" class="block block__header">
           <h3 class="block__heading">Portfolio</h3>
           <p>
             Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
@@ -403,14 +422,18 @@
           </p>
         </div>
         <section class="isotype__container isotype">
-          <ul class="list">
+          <ul data-aos="fade-up" data-aos-delay="100" class="list">
             <li class="list__item">All</li>
             <li class="list__item">App</li>
             <li class="list__item">Product</li>
             <li class="list__item">Branding</li>
             <li class="list__item">Books</li>
           </ul>
-          <div class="isotype__layout grid grid--1x2 grid--1x3">
+          <div
+            data-aos="fade-up"
+            data-aos-delay="200"
+            class="isotype__layout grid grid--1x2 grid--1x3"
+          >
             <div class="isotype__image">
               <img src="img/app-1.jpg" alt="" />
               <div class="isotype__info">
@@ -507,14 +530,22 @@
       <!-- Pricing -->
 
       <div id="work" class="pricing container">
-        <div class="block block__header">
+        <div
+          data-aos="fade-up"
+          data-aos-delay="100"
+          class="block block__header"
+        >
           <h3 class="block__heading">Pricing</h3>
           <p>
             Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
             consectetur velit
           </p>
         </div>
-        <div class="pricing__items grid grid--1x2">
+        <div
+          data-aos="fade-up"
+          data-aos-delay="100"
+          class="pricing__items grid grid--1x2"
+        >
           <div class="pricing__item">
             <h4 class="pricing__description">Portrait Photography</h4>
             <h5 class="pricing__item-price">$160.00</h5>
@@ -544,7 +575,11 @@
 
       <!-- FAQ -->
 
-      <div class="faq container grid grid--1x2">
+      <div
+        data-aos="fade-up"
+        data-aos-delay="200"
+        class="faq container grid grid--1x2"
+      >
         <div class="faq__header">
           <h3 class="faq__heading">
             Frequently Asked <strong>Questions</strong>
@@ -668,7 +703,11 @@
         <img class="testimonials__bg" src="img/testimonials-bg.jpg" alt="" />
         <div class="testimonials__container swiper container">
           <div class="testimonials__list list swiper-wrapper">
-            <div class="testimonials__item swiper-slide">
+            <div
+              data-aos="fade-up"
+              data-aos-delay="100"
+              class="testimonials__item swiper-slide"
+            >
               <img src="img/testimonials-1.jpg" alt="" />
               <h5 class="person__name">Saul Goodman</h5>
               <h6 class="person__profile">Ceo & Founder</h6>
@@ -699,7 +738,11 @@
               </blockquote>
             </div>
 
-            <div class="testimonials__item swiper-slide">
+            <div
+              data-aos="fade-up"
+              data-aos-delay="100"
+              class="testimonials__item swiper-slide"
+            >
               <img src="img/testimonials-2.jpg" alt="" />
               <h5 class="person__name">Sara Wilson</h5>
               <h6 class="person__profile">Designer</h6>
@@ -729,7 +772,11 @@
                 </p>
               </blockquote>
             </div>
-            <div class="testimonials__item swiper-slide">
+            <div
+              data-aos="fade-up"
+              data-aos-delay="100"
+              class="testimonials__item swiper-slide"
+            >
               <img src="img/testimonials-3.jpg" alt="" />
               <h5 class="person__name">Jena Karslin</h5>
               <h6 class="person__profile">Store Owner</h6>
@@ -759,7 +806,11 @@
                 </p>
               </blockquote>
             </div>
-            <div class="testimonials__item swiper-slide">
+            <div
+              data-aos="fade-up"
+              data-aos-delay="100"
+              class="testimonials__item swiper-slide"
+            >
               <img src="img/testimonials-4.jpg" alt="" />
               <h5 class="person__name">Matt Brandon</h5>
               <h6 class="person__profile">Freelancer</h6>
@@ -789,7 +840,11 @@
                 </p>
               </blockquote>
             </div>
-            <div class="testimonials__item swiper-slide">
+            <div
+              data-aos="fade-up"
+              data-aos-delay="100"
+              class="testimonials__item swiper-slide"
+            >
               <img src="img/testimonials-5.jpg" alt="" />
               <h5 class="person__name">John Larson</h5>
               <h6 class="person__profile">Enterprenur</h6>
@@ -831,14 +886,22 @@
       <!-- Contact Form -->
 
       <div id="contact" class="contact container">
-        <div class="block block__header">
+        <div
+          data-aos="fade-up"
+          data-aos-delay="100"
+          class="block block__header"
+        >
           <h3 class="block__heading">Contact</h3>
           <p>
             Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
             consectetur velit
           </p>
         </div>
-        <div class="contact--wrap grid grid--1x3">
+        <div
+          data-aos="fade-up"
+          data-aos-delay="200"
+          class="contact--wrap grid grid--1x3"
+        >
           <div class="contact__info">
             <div class="icon__container icon__boundary">
               <svg class="icon icon--lsmall icon--accent">
@@ -875,7 +938,7 @@
             </div>
           </div>
         </div>
-        <div class="contact__form">
+        <div data-aos="fade-up" data-aos-delay="300" class="contact__form">
           <div class="contact__form-info grid grid--1x2">
             <div class="contact__values">
               <input
@@ -936,6 +999,11 @@
       </div>
     </footer>
 
+    <!-- Animation Script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <!-- Linking Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>

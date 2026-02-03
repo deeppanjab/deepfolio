@@ -32,20 +32,31 @@ const swiper = new Swiper(".testimonials__container", {
   },
 });
 
-const sections = document.querySelectorAll("main [id]");
+const sections = document.querySelectorAll(
+  "#home, #about, #services, #portfolio, #work, #blog, #contact"
+);
+
 const navLinks = document.querySelectorAll(".nav__link");
 
-window.addEventListener("scroll", () => {
+function setActiveNav() {
   let current = "";
 
-  sections.forEach((section) => {
-    const sectionTop = section.offsetTop - 150;
-    const sectionHeight = section.offsetHeight;
+  // Home when near top
+  if (window.scrollY < 200) {
+    current = "home";
+  } else {
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop - 150;
+      const sectionHeight = section.offsetHeight;
 
-    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-      current = section.getAttribute("id");
-    }
-  });
+      if (
+        window.scrollY >= sectionTop &&
+        window.scrollY < sectionTop + sectionHeight
+      ) {
+        current = section.getAttribute("id");
+      }
+    });
+  }
 
   navLinks.forEach((link) => {
     link.classList.remove("active");
@@ -54,7 +65,14 @@ window.addEventListener("scroll", () => {
       link.classList.add("active");
     }
   });
-});
+}
+
+// Run on scroll
+window.addEventListener("scroll", setActiveNav);
+
+// Run on page load
+window.addEventListener("load", setActiveNav);
+
 
 const hambar = document.querySelector(".nav__hambar");
 const navList = document.querySelector(".nav__list");
@@ -67,6 +85,16 @@ window.addEventListener("resize", () => {
     navList.classList.remove("nav__menu");
   }
 });
+
+// Close mobile menu when a nav link is clicked
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    if (window.innerWidth < 1024) {
+      navList.classList.remove("nav__menu");
+    }
+  });
+});
+
 
 // Hero Profile Typing
 

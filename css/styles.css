@@ -31,7 +31,9 @@ html {
 }
 
 /* Ensure jumping to anchors accounts for the sticky navbar */
-main [id] {
+
+section,
+div[id] {
   scroll-margin-top: 132px;
 }
 
@@ -117,6 +119,33 @@ h4 {
   margin: 0 auto;
 }
 
+.grid--1x2 {
+  grid-template-columns: 1fr;
+}
+
+.grid--1x3 {
+  grid-template-columns: 1fr;
+}
+
+.grid--1x4 {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .grid--1x2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid--1x3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .grid--1x4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 /* Icons */
 
 .icon {
@@ -168,33 +197,38 @@ h4 {
 }
 
 /* Service Components */
+
+.service__container {
+  gap: 3rem;
+}
+
 .service__card {
-  box-shadow: 0px 5px 90px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.08);
   background-color: var(--surface-color);
   padding: 60px 30px;
-  transition: all ease-in-out 0.3s;
   border-radius: 18px;
   border-bottom: 5px solid var(--surface-color);
-  margin: 2rem;
+  margin: 1rem 2rem;
+  transform: translateY(0);
+  transition:
+    transform 180ms ease-out,
+    box-shadow 180ms ease-out,
+    border-color 180ms linear;
+  will-change: transform;
 }
+
+.service__card:hover {
+  transform: translateY(-10px) !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  border-bottom: 5px solid var(--accent-color);
+}
+
 .service__card > p {
   line-height: 1.2;
   font-size: 1.4rem;
 }
 .card__heading {
   font-size: 2.2rem;
-}
-
-@media screen and (min-width: 768px) {
-  .service__container.grid--1x2 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .service__container.grid--1x3 {
-    grid-template-columns: repeat(3, 1fr);
-  }
 }
 
 /* Resume Element */
@@ -238,12 +272,6 @@ h4 {
   border: 2px solid var(--accent-color);
 }
 
-@media screen and (min-width: 1024px) {
-  .resume__info.grid--1x2 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 /* Pricing Section */
 
 .pricing__description {
@@ -260,12 +288,6 @@ h4 {
 
 .pricing__item-price {
   color: var(--accent-color);
-}
-
-@media screen and (min-width: 1024px) {
-  .pricing__items.grid--1x2 {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 /* FAQ */
@@ -332,9 +354,9 @@ h4 {
   transition: transform 0.5s;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .faq.grid--1x2 {
-    grid-template-columns: 35% auto;
+    grid-template-columns: 1fr 2fr;
   }
 }
 
@@ -353,7 +375,7 @@ h4 {
   align-items: center;
   gap: 1.2rem;
 }
-.content__address{
+.content__address {
   width: 70%;
 }
 .content__address-heading {
@@ -394,9 +416,11 @@ textarea {
   height: 14rem;
 }
 
-
 .contact__form {
   text-align: center;
+}
+.contact__form-info {
+  gap: 0 3rem;
 }
 
 .btn {
@@ -413,16 +437,6 @@ textarea {
   color: var(--surface-color);
 }
 
-@media screen and (min-width: 1024px) {
-  .contact--wrap.grid--1x3 {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .contact__form-info.grid--1x2{
-    gap: 3rem;
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-}
 /* Person Information */
 
 .person__info {
@@ -491,12 +505,6 @@ textarea {
   left: 0;
   bottom: 0;
   margin: auto;
-}
-
-@media screen and (min-width: 768px) {
-  .person__info.grid--1x2 {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -586,9 +594,6 @@ textarea {
 }
 
 @media screen and (min-width: 768px) {
-  .isotype__layout.grid--1x2 {
-    grid-template-columns: repeat(2, 1fr);
-  }
   .isotype .list {
     font-size: 1.6rem;
   }
@@ -599,12 +604,6 @@ textarea {
 
   .isotype__info {
     font-size: 1.6rem;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .isotype .grid--1x3 {
-    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -644,12 +643,6 @@ textarea {
 .stats__items {
   text-align: center;
   padding: 8rem 0;
-}
-
-@media screen and (min-width: 1024px) {
-  .grid--1x4 {
-    grid-template-columns: repeat(4, 1fr);
-  }
 }
 
 /* Testimonials */
@@ -771,7 +764,7 @@ textarea {
   font-family: var(--nav-font);
   position: relative;
   z-index: 12;
-   position: sticky;
+  position: sticky;
   top: 0;
 }
 
@@ -780,7 +773,6 @@ textarea {
   align-items: center;
   justify-content: space-between;
   padding: 2.4rem 1rem;
-
 }
 
 .nav a {
@@ -875,24 +867,21 @@ textarea {
 /* Hero */
 
 .hero__section {
+  background-attachment: scroll;
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   height: calc(100vh - 9rem);
-  background: url(/img/hero-bg.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center;
+  background: url("/img/hero-bg.jpg") center/cover no-repeat;
   position: relative;
-  text-align: center;
 }
 .hero__heading,
 .hero__profile {
   color: var(--surface-color);
 }
 
-.hero__info{
+.hero__info {
   z-index: 9;
 }
 .hero__heading {
