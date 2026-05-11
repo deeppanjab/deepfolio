@@ -307,16 +307,14 @@ h4 {
   font-size: 1.6rem;
 }
 
-.faq__items {
-  transition: all 0.5s ease;
-}
 .faq__item {
   background-color: var(--surface-color);
   position: relative;
-  padding: 1rem 2rem;
+  padding-block: 1rem;
+  padding-inline: 4rem 2rem;
   margin: 2rem;
   box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
+  /* overflow: hidden; */
   cursor: pointer;
 }
 .number {
@@ -325,9 +323,12 @@ h4 {
 
 .faq__item .icon {
   position: absolute;
-  right: 8px;
+  right: 24px;
   top: 24px;
-  transition: transform 0.4s ease;
+  transition:
+    transform 0.4s ease,
+    fill 0.4s ease;
+    pointer-events: none;
 }
 
 .faq__content {
@@ -335,23 +336,20 @@ h4 {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
-  transition:
-    max-height 0.6s ease,
-    opacity 1s ease;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
 }
 
 .collapsible--expanded .faq__item-heading {
   color: var(--accent-color);
 }
 .collapsible--expanded .faq__content {
-  max-height: 500px; /* large enough to fit content */
+  max-height: 200px; 
   opacity: 1;
 }
 
 .collapsible--expanded .icon {
   transform: rotate(90deg);
   fill: var(--accent-color);
-  transition: transform 0.5s;
 }
 
 @media screen and (min-width: 768px) {

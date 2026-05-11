@@ -2,11 +2,22 @@ const collapsibles = document.querySelectorAll(".collapsible");
 
 collapsibles.forEach((item) => {
   item.addEventListener("click", function () {
+    const content = this.querySelector(".faq__content");
+
     collapsibles.forEach((el) => {
-      if (el !== this) el.classList.remove("collapsible--expanded");
+      if (el !== this) {
+        el.classList.remove("collapsible--expanded");
+        el.querySelector(".faq__content").style.maxHeight = null;
+      }
     });
 
     this.classList.toggle("collapsible--expanded");
+
+    if (this.classList.contains("collapsible--expanded")) {
+      content.style.maxHeight = content.scrollHeight + "px"; // exact height
+    } else {
+      content.style.maxHeight = null;
+    }
   });
 });
 
