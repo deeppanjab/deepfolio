@@ -1,3 +1,6 @@
+"use strict";
+
+// FAQ Collapsible
 const collapsibles = document.querySelectorAll(".collapsible");
 
 collapsibles.forEach((item) => {
@@ -14,28 +17,24 @@ collapsibles.forEach((item) => {
     this.classList.toggle("collapsible--expanded");
 
     if (this.classList.contains("collapsible--expanded")) {
-      content.style.maxHeight = content.scrollHeight + "px"; // exact height
+      content.style.maxHeight = content.scrollHeight + "px";
     } else {
       content.style.maxHeight = null;
     }
   });
 });
 
-// Swiper Testimonial Cards
-
+// Swiper Testimonials
 const swiper = new Swiper(".testimonials__container", {
   loop: true,
   speed: 800,
-
   autoplay: {
     delay: 3000,
     disableOnInteraction: false,
     pauseOnMouseEnter: true,
   },
-
   slidesPerView: 1,
   spaceBetween: 30,
-
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -43,23 +42,21 @@ const swiper = new Swiper(".testimonials__container", {
   },
 });
 
+// Active Nav on Scroll
 const sections = document.querySelectorAll(
   "#home, #about, #services, #portfolio, #work, #blog, #contact"
 );
-
 const navLinks = document.querySelectorAll(".nav__link");
 
 function setActiveNav() {
   let current = "";
 
-  // Home when near top
   if (window.scrollY < 200) {
     current = "home";
   } else {
     sections.forEach((section) => {
       const sectionTop = section.offsetTop - 150;
       const sectionHeight = section.offsetHeight;
-
       if (
         window.scrollY >= sectionTop &&
         window.scrollY < sectionTop + sectionHeight
@@ -71,33 +68,29 @@ function setActiveNav() {
 
   navLinks.forEach((link) => {
     link.classList.remove("active");
-
     if (link.getAttribute("href") === `#${current}`) {
       link.classList.add("active");
     }
   });
 }
 
-// Run on scroll
 window.addEventListener("scroll", setActiveNav);
-
-// Run on page load
 window.addEventListener("load", setActiveNav);
 
-
+// Mobile Menu
 const hambar = document.querySelector(".nav__hambar");
 const navList = document.querySelector(".nav__list");
 
 hambar.addEventListener("click", () => {
   navList.classList.toggle("nav__menu");
 });
+
 window.addEventListener("resize", () => {
   if (window.innerWidth >= 1024) {
     navList.classList.remove("nav__menu");
   }
 });
 
-// Close mobile menu when a nav link is clicked
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
     if (window.innerWidth < 1024) {
@@ -106,12 +99,9 @@ navLinks.forEach((link) => {
   });
 });
 
-
-// Hero Profile Typing
-
+// Hero Typing Effect
 const textEl = document.getElementById("typed-text");
 const cursorEl = document.querySelector(".cursor");
-
 const careers = ["Youtuber", "Front-end Developer", "Student", "Educator"];
 
 let careerIndex = 0;
@@ -125,21 +115,17 @@ function update() {
     : currentCareer.slice(0, characterIndex++);
 
   textEl.textContent = currentText;
-
-  // Turn off blinking while typing/deleting
   cursorEl.classList.remove("blink");
 
-  // Finished typing
   if (!isDeleting && characterIndex === currentCareer.length + 1) {
-    cursorEl.classList.add("blink"); // Blink after typing finishes
+    cursorEl.classList.add("blink");
     setTimeout(() => {
       isDeleting = true;
       update();
-    }, 2000); // Wait 2 seconds before erasing
+    }, 2000);
     return;
   }
 
-  // Finished deleting
   if (isDeleting && characterIndex === 0) {
     isDeleting = false;
     careerIndex = (careerIndex + 1) % careers.length;
@@ -149,3 +135,86 @@ function update() {
 }
 
 update();
+
+// =============================================
+// Portfolio Filter
+// =============================================
+
+const portfolioSection = document.querySelector("#portfolio");
+const filterBtns = portfolioSection.querySelectorAll("[data-filter]");
+const filterItems = portfolioSection.querySelectorAll("[data-category]");
+
+const filterFunc = function (selectedValue) {
+  filterItems.forEach(function (item) {
+    if (selectedValue === "all" || item.dataset.category === selectedValue) {
+      item.classList.remove("hidden");
+
+      // Force animation replay
+      item.style.animation = "none";
+      item.offsetHeight; // trigger reflow
+      item.style.animation = "";
+
+    } else {
+      item.classList.add("hidden");
+    }
+  });
+};
+
+let lastActive = filterBtns[0];
+
+filterBtns.forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    const selectedValue = this.dataset.filter;
+
+    filterFunc(selectedValue);
+
+    lastActive.classList.remove("active");
+    this.classList.add("active");
+    lastActive = this;
+  });
+});
+
+// =============================================
+// Lightbox
+// =============================================
+
+// Create lightbox elements dynamically
+const lightbox = document.createElement("div");
+lightbox.classList.add("lightbox");
+lightbox.innerHTML = `
+  <button class="lightbox__close">&times;</button>
+  <img class="lightbox__img" src="" alt="" />
+`;
+document.body.appendChild(lightbox);
+
+const lightboxImg = lightbox.querySelector(".lightbox__img");
+const lightboxClose = lightbox.querySelector(".lightbox__close");
+
+// Open on image click
+filterItems.forEach(function (item) {
+  item.addEventListener("click", function () {
+    const img = this.querySelector("img");
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+    lightbox.classList.add("active");
+    document.body.style.overflow = "hidden"; // prevent background scroll
+  });
+});
+
+// Close on button click
+lightboxClose.addEventListener("click", closeLightbox);
+
+// Close on background click
+lightbox.addEventListener("click", function (e) {
+  if (e.target === lightbox) closeLightbox();
+});
+
+// Close on Escape key
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") closeLightbox();
+});
+
+function closeLightbox() {
+  lightbox.classList.remove("active");
+  document.body.style.overflow = "";
+}
